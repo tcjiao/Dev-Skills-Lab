@@ -6,9 +6,9 @@
     <title>Skills</title>
 </head>
 <body>
-    <h1><%= skill.skill %></h1>
-    <p><%= skill.description %></p>
-    <h3>Complete: <%= skill.learned ? 'Yes' : 'No' %></h3>
-    <h3><a href="/skills">Back</a></h3>
+  <h1><%= skill.skill %></h1>
+  <h3>Complete: <%= skill.learned ? 'Yes' : 'No' %></h3>
+  <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+  <h3><a href="/skills">Back</a></h3>
   </body>
 </html>

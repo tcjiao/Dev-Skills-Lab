@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+</head>
+<body>
+  <a href="/">Home</a>
+  | 
+ <a href="/skills">All Skills</a>
+ <h1><%= title %></h1>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+      <input type="text" name="skill" value="<%= skill.skill  %>">
+      <br>
+      <label>
+         <input type="checkbox" name="done" <%= skill.learned ? 'checked' : '' %>>
+         Completed
+      </label><br>
+      <button type="submit">Update Skill</button>
+    </form>
+
+  </body>
+</html>
